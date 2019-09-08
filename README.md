@@ -1,4 +1,4 @@
-# house-pricing-prediction
+# house-price-prediction
 This repository is about processing scraped house/apartment data and creating a price prediction model.
 
 Business Need:
