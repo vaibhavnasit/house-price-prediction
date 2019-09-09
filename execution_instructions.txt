@@ -1,0 +1,42 @@
+Execution Instruction:
+
+-----------------------------------------
+Running it on Windows (Local mode)		|
+-----------------------------------------
+- Running from windows cmd terminal
+- Download dataset present at "https://recruitingupload.blob.core.windows.net/public/listings.tar.gz"
+- Extract it on Desktop and put all .csv files in directory called "EuroWings-Digital\input\" (Example : C:\\Users\user\Desktop\EuroWings-Digital\input\*.csv)
+- Choose output directory (Example : C:\\Users\user\Desktop\EuroWings-Digital\output\)
+- Put "HousePricingPreProcessor.py" to required location (for ex, C:\Installations\spark-2.4.0-bin-hadoop2.7\HousePricingPreProcessor.py)
+- Set SPARK_HOME and execute below command:
+
+{SPARK_HOME}\spark-submit --master local --driver-memory 2g --executor-memory 2g --executor-cores 2 C:\Installations\spark-2.4.0-bin-hadoop2.7\HousePricingPreProcessor.py "C:\\\\Users\\user\\Desktop\\EuroWings-Digital\\input\\"  "C:\\\\Users\\user\\Desktop\\EuroWings-Digital\\output\\"
+
+- Once done provide csv file present at (for ex, C:\\Users\user\Desktop\EuroWings-Digital\output\<file_name.csv>) to our script HousePricePredictor.py.
+- Execute it using ipython console
+
+
+-----------------------------------------
+Running it on Linux (Local mode)		|
+-----------------------------------------
+- Running from linux terminal
+- Download dataset present at "https://recruitingupload.blob.core.windows.net/public/listings.tar.gz"
+- Extract it in "/home/<user>/EuroWings-Digital/input/" directory 
+- Choose output directory (Example : /home/<user>/EuroWings-Digital/output/)
+- Put "HousePricingPreProcessor.py" to required location (for ex, /home/<user>/EuroWings-Digital/bin/HousePricingPreProcessor.py)
+- Set SPARK_HOME and execute below command:
+
+{SPARK_HOME}\spark-submit --master local --driver-emory 2g --executor-memory 2g --executor-cores 2 /home/<user>/EuroWings-Digital/bin/HousePricingPreProcessor.py "/home/<user>/EuroWings-Digital/input/"  "/home/<user>/EuroWings-Digital/output/"
+
+- Once done provide csv file present at (for ex, /home/<user>/EuroWings-Digital/output/output/<file_name.csv>) to our script HousePricePredictor.py.
+- Execute it using ipython console
+
+
+-----------------------------------------
+Running it on Yarn Mode for TBs of data |
+-----------------------------------------
+- Change "--master yarn" in spark-submit command change parameters like --driver-memory, --executor-memory, --executor-cores accordingly
+- Provide input and output directories as "hdfs://" directories
+- Need to tweak a code little bit to write files to hdfs 
+
+
