@@ -83,3 +83,12 @@ Additional Functionalities:
    -> If organization is planning to go onto the cloud then we can use AWS services like Spark on EMR and SageMaker. The same code can be executed from cloud. 
    And AWS provides Auto Scaling features for many of its services like Lambda, DynamoDB, EMR, etc..
 
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+Additional Task : 
+
+- I have also implemented the pre-processor to use the old data set shared with me earlier. 
+- The file name is "HousePricingPreProcessorOldDataSet.java"
+- We can execute this stand-alone java program and can test the generated output/csv file as well.
